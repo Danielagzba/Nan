@@ -1,1 +1,286 @@
 <a href="https://www.google.com" target="_blank">google</a>
+
+MacBook-Pro-de-Apple-2:Proyecto1 danielagzba$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+MacBook-Pro-de-Apple-2:Proyecto1 danielagzba$ git pull origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+MacBook-Pro-de-Apple-2:Proyecto1 danielagzba$ ls
+BodaAndreaybeto Mi-proyecto
+MacBook-Pro-de-Apple-2:Proyecto1 danielagzba$ cd Mi-proyecto/
+MacBook-Pro-de-Apple-2:Mi-proyecto danielagzba$ cd ..
+MacBook-Pro-de-Apple-2:Proyecto1 danielagzba$ cd BodaAndreaybeto/
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ git pull origin master
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 8 (delta 5), reused 7 (delta 5), pack-reused 0
+Unpacking objects: 100% (8/8), done.
+From https://github.com/Danielagzba/BodaAyA
+ * branch            master     -> FETCH_HEAD
+   444bc3c..6dd8c2e  master     -> origin/master
+Updating 444bc3c..6dd8c2e
+error: Your local changes to the following files would be overwritten by merge:
+        layouts/default.vue
+        nuxt.config.js
+        pages/index.vue
+Please commit your changes or stash them before you merge.
+Aborting
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ git add .
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ git commit -m "comitting before pull"
+[master f684619] comitting before pull
+ Committer: Daniela Gonzalez <danielagzba@MacBook-Pro-de-Apple-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 7 insertions(+), 6 deletions(-)
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ git pull origin master
+From https://github.com/Danielagzba/BodaAyA
+ * branch            master     -> FETCH_HEAD
+Auto-merging pages/index.vue
+Auto-merging nuxt.config.js
+Auto-merging layouts/default.vue
+CONFLICT (content): Merge conflict in layouts/default.vue
+Automatic merge failed; fix conflicts and then commit the result.
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ npm run dev
+
+> BodaAndreaybeto@1.0.0 dev /Users/danielagzba/Desktop/Proyecto1/BodaAndreaybeto
+> nuxt
+
+
+   ╭─────────────────────────────────────────────╮
+   │                                             │
+   │   Nuxt.js v2.10.2                           │
+   │   Running in development mode (universal)   │
+   │                                             │
+   │   Listening on: http://localhost:3000/      │
+   │                                             │
+   ╰─────────────────────────────────────────────╯
+
+
+--- Reverting to old commit ---
+MacBook-Pro-de-Apple-2:Proyecto1 danielagzba$ ls
+BodaAndreaybeto Mi-proyecto
+MacBook-Pro-de-Apple-2:Proyecto1 danielagzba$ cd BodaAndreaybeto/
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ git branch
+* master
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$
+ 444bc3cb349eeea692b47a705a4247864f410234nielagzba$ git checkout -b first_commit
+layouts/default.vue: needs merge
+error: you need to resolve your current index first
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+
+        modified:   nuxt.config.js
+        modified:   pages/index.vue
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   layouts/default.vue
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   nuxt.config.js
+        modified:   pages/index.vue
+
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ git add .
+ fix code"o-de-Apple-2:BodaAndreaybeto danielagzba$ git commit -m "attempting to
+[master 196d4b3] attempting to fix code
+ Committer: Daniela Gonzalez <danielagzba@MacBook-Pro-de-Apple-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+ 444bc3cb349eeea692b47a705a4247864f410234               checkout -b first_commit
+Switched to a new branch 'first_commit'
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ git status
+On branch first_commit
+nothing to commit, working tree clean
+MacBook-Pro-de-Apple-2:BodaAndreaybeto danielagzba$ npm run dev
+
+> BodaAndreaybeto@1.0.0 dev /Users/danielagzba/Desktop/Proyecto1/BodaAndreaybeto
+> nuxt
+
+
+   ╭─────────────────────────────────────────────╮
+   │                                             │
+   │   Nuxt.js v2.10.2                           │
+   │   Running in development mode (universal)   │
+   │                                             │
+   │   Listening on: http://localhost:3000/      │
+   │                                             │
+   ╰─────────────────────────────────────────────╯
+
+ℹ Preparing project for development
+ℹ Initial build may take a while
+✔ Builder initialized
+✔ Nuxt files generated
+
+● Client █████████████████████████ compiling (0%)
+
+● Client █████████████████████████ building (10%) 1/2 modules 1 active
+
+● Client █████████████████████████ building (10%) 1/2 modules 1 active
+
+● Client █████████████████████████ building (10%) 2/3 modules 1 active
+
+● Client █████████████████████████ building (10%) 2/4 modules 2 active
+
+● Client █████████████████████████ building (10%) 3/6 modules 3 active
+
+● Client █████████████████████████ building (10%) 4/9 modules 5 active
+
+● Client █████████████████████████ building (10%) 7/13 modules 6 active
+
+● Client █████████████████████████ building (11%) 10/14 modules 4 active
+
+● Client █████████████████████████ building (11%) 11/16 modules 5 active
+
+● Client █████████████████████████ building (11%) 13/30 modules 17 active
+
+● Client █████████████████████████ building (11%) 14/32 modules 18 active
+
+● Client █████████████████████████ building (12%) 17/36 modules 19 active
+
+● Client █████████████████████████ building (13%) 32/37 modules 5 active
+
+● Client █████████████████████████ building (13%) 32/38 modules 6 active
+
+● Client █████████████████████████ building (13%) 32/45 modules 13 active
+
+● Client █████████████████████████ building (14%) 37/55 modules 18 active
+
+● Client █████████████████████████ building (15%) 42/83 modules 41 active
+
+● Client █████████████████████████ building (15%) 45/100 modules 55 active
+
+● Client █████████████████████████ building (16%) 56/104 modules 48 active
+
+● Client █████████████████████████ building (20%) 84/104 modules 20 active
+
+● Client █████████████████████████ building (22%) 103/118 modules 15 active
+
+● Client █████████████████████████ building (23%) 110/131 modules 21 active
+
+● Client █████████████████████████ building (24%) 117/143 modules 26 active
+
+● Client █████████████████████████ building (25%) 133/165 modules 32 active
+
+● Client █████████████████████████ building (27%) 144/180 modules 36 active
+
+● Client █████████████████████████ building (27%) 144/180 modules 36 active
+
+● Client █████████████████████████ building (27%) 144/180 modules 36 active
+
+● Client █████████████████████████ building (28%) 152/180 modules 28 active
+
+● Client █████████████████████████ building (28%) 156/185 modules 29 active
+
+● Client █████████████████████████ building (28%) 158/185 modules 27 active
+
+● Client █████████████████████████ building (29%) 162/185 modules 23 active
+
+● Client █████████████████████████ building (32%) 186/187 modules 1 active
+
+● Client █████████████████████████ building (32%) 186/187 modules 1 active
+
+● Client █████████████████████████ building (32%) 186/188 modules 2 active
+
+● Client █████████████████████████ building (33%) 194/200 modules 6 active
+
+● Client █████████████████████████ building (33%) 194/206 modules 12 active
+
+● Client █████████████████████████ building (33%) 198/213 modules 15 active
+
+● Client █████████████████████████ building (34%) 201/214 modules 13 active
+
+● Client █████████████████████████ building (34%) 201/214 modules 13 active
+
+● Client █████████████████████████ building (34%) 202/215 modules 13 active
+
+● Client █████████████████████████ building (34%) 202/215 modules 13 active
+
+● Client █████████████████████████ building (35%) 213/220 modules 7 active
+
+● Client █████████████████████████ building (36%) 220/225 modules 5 active
+
+● Client █████████████████████████ building (36%) 221/225 modules 4 active
+
+● Client █████████████████████████ building (37%) 225/228 modules 3 active
+
+● Client █████████████████████████ building (37%) 227/229 modules 2 active
+
+● Client █████████████████████████ building (37%) 227/229 modules 2 active
+ node_modules/vue-style-loader/lib/listToStyles.js
+
+● Client █████████████████████████ building (37%) 228/229 modules 1 active
+
+● Client █████████████████████████ building (37%) 228/229 modules 1 active
+
+● Client █████████████████████████ building (37%) 229/229 modules 0 active
+
+● Client █████████████████████████ building (37%) 229/230 modules 1 active
+
+● Client █████████████████████████ advanced chunk optimization (77%) RuntimeCh
+unkPlugin
+
+● Client █████████████████████████ additional chunk assets processing (90%)
+
+● Client █████████████████████████ emitting (95%) HtmlWebpackPlugin
+
+● Client █████████████████████████ emitting (95%) vue-client-plugin
+
+● Client █████████████████████████ after emitting (98%)
+
+✔ Client
+  Compiled successfully in 16.51s
+
+✔ Server
+  Compiled successfully in 9.58s
+
+ℹ Waiting for file changes
+ℹ Memory usage: 365 MB (RSS: 381 MB)
+
+ ERROR  [Vue warn]: Invalid prop: custom validator check failed for prop "justify".
+

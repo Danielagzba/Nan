@@ -14,6 +14,12 @@
     </v-carousel>
 </template>
 
+<style>
+  div {
+    font-family: "montserrat", Times, serif;
+  }
+</style>
+
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
@@ -53,7 +59,10 @@ export default {
                     src: 'https://i.imgur.com/Wyw8j10.jpg',
                 },
                 {
-                    src: 'https://i.imgur.com/TN03vf1.jpg',
+                    src: 'https://i.imgur.com/GEtKbGO.jpg',
+                },
+                {
+                    src: 'https://i.imgur.com/h81eaTJ.jpg',
                 },
             ],
         }
