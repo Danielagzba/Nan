@@ -1,7 +1,7 @@
 <template>
   <v-app :dark="setTheme">
 
-    <darkMode></darkMode>
+
 
 
     <v-navigation-drawer
@@ -79,6 +79,7 @@
 
     <nuxt/>
 
+    <darkMode></darkMode>
 
 
     <v-footer
@@ -98,7 +99,7 @@
           <strong>By Nan</strong>
         </v-col>
       </v-row>
-
+      <darkMode></darkMode>
     </v-footer>
   </v-app>
 </template>
@@ -107,6 +108,7 @@
     import darkMode from "../components/darkMode";
 
     export default {
+
 
         data() {
 
@@ -147,22 +149,24 @@
                         src: 'https://i.imgur.com/TN03vf1.jpg',
                     },
                 ],
-                components: {
-                    darkMode: darkMode
-                },
-                computed: {
-                    setTheme() {
-                        if (this.$store.state.isDark) {
-                            return (this.$vuetify.theme.dark = true);
-                        }
-                        else {
-                            return (this.$vuetify.theme.dark = false);
-                        }
-                    }
-                }
+
 
 
             }
+        },
+        components: {
+            darkMode: darkMode
+        },
+        computed: {
+            setTheme() {
+                if (this.$store.state.isDark) {
+                    return (this.$vuetify.theme.dark = true);
+                }
+                else {
+                    return (this.$vuetify.theme.dark = false);
+                }
+            }
         }
+
     }
 </script>
