@@ -2,7 +2,7 @@
 
   <v-btn icon>
     <v-icon @click="isDark = !isDark">
-      mdi-heart
+      mdi-invert-colors
     </v-icon>
   </v-btn>
 

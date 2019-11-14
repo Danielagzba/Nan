@@ -1,81 +1,45 @@
 <template>
   <v-app :dark="setTheme">
 
+    <v-card tile>
+      <v-toolbar
+        color="primary"
+        dark
+        flat>
 
 
 
-    <v-navigation-drawer
-      app
-      temporary
-      clipped
-      v-model="drawer"
-      class="indigo"
-      color="primary">
+        <v-toolbar-title>Nan</v-toolbar-title>
 
+        <v-spacer></v-spacer>
 
-      <v-list>
-        <v-list-item-group v-model="model">
-          <v-list-item
-            nuxt
-            v-for="(item, i) in items"
-            :key="i"
-            :to="item.to"
-          >
-            <v-list-item-icon>
-              <v-icon v-text="item.icon"
-                      color="white"></v-icon>
-            </v-list-item-icon>
-            <v-list-item-content class="accent--text">
-              <v-list-item-title v-text="item.text"></v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
 
-    </v-navigation-drawer>
+        <v-btn icon>
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>
 
-    <v-app-bar tile app clipped-left
-               color="accent">
-
-      <v-app-bar-nav-icon @click="drawer = !drawer" color="primary"></v-app-bar-nav-icon>
-
-      <v-toolbar-title class="primary--text">Daniela
-        <span class="font-weight-bold primary--text">Gonzalez</span>
-
-
-      </v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-
-      <v-btn icon>
-        <v-icon color="primary">mdi-magnify</v-icon>
-      </v-btn>
-
-
-      <v-btn icon>
-        <v-icon color="primary">mdi-heart</v-icon>
-      </v-btn>
-
-
-      <v-menu open-on-hover top offset-y>
-        <template v-slot:activator="{ on }">
-          <v-btn icon
-                 v-on="on">
-            <v-icon color="primary">mdi-dots-vertical</v-icon>
-          </v-btn>
+        <template v-slot:extension>
+        <v-tabs
+          class="tabs"
+          centered
+          grow
+          background-color="transparent"
+          v-model="activeTab"
+        >
+          <v-tab v-for="tab in tabs" :key="tab.id" :to="tab.to" exact>
+            {{ tab.name }}
+          </v-tab>
+        </v-tabs>
         </template>
-        <v-list>
-          <v-list-item
-            v-for="(item, index) in list"
-            :key="index"
-            @click=""
-          >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </v-app-bar>
+
+
+
+      </v-toolbar>
+    </v-card>
+
 
     <nuxt/>
 
@@ -83,7 +47,7 @@
 
 
     <v-footer
-      color="white"
+      color="primary"
       app
       padless
     >
@@ -93,7 +57,7 @@
       >
 
         <v-col
-          class="lighten-1 py-4 text-center primary--text"
+          class="lighten-1 py-4 text-center white--text"
           cols="12"
         >
           <strong>By Nan</strong>
@@ -110,49 +74,18 @@
     export default {
 
 
-        data() {
-
-            return {
-                drawer: false,
-                items: [
-                    {
-                        icon: 'mdi-home', text: 'Home', to: '/'
-                    },
-                    {
-                        icon: 'mdi-camera', text: 'Work', to: '/work'
-                    },
-                    {
-                        icon: 'mdi-face', text: 'About me', to: '/aboutme'
-                    },
-                    {
-                        icon: 'mdi-email', text: 'Contact', to: '/contact'
-                    },
-                ],
-                list: [
-                    {title: 'Click Me'},
-                    {title: 'Click Me'},
-                    {title: 'Click Me'},
-                    {title: 'Click Me 2'},
-                ],
-
-                photos: [
-                    {
-                        src: 'https://i.imgur.com/dVQD7jm.jpg',
-                    },
-                    {
-                        src: 'https://i.imgur.com/JV55Ta2.jpg',
-                    },
-                    {
-                        src: 'https://i.imgur.com/Wyw8j10.jpg',
-                    },
-                    {
-                        src: 'https://i.imgur.com/TN03vf1.jpg',
-                    },
-                ],
+        data(){
+        return {
+            activeTab: `/user/${this.id}`,
+            tabs: [
+                { id: 1, name: "Home", to:'/' },
+                { id: 2, name: "Work", to:'/work' },
+                { id: 3, name: "About me", to:'/aboutme' },
+                { id: 4, name: "Contact", to:'/contact' }
+            ]
+        };
 
 
-
-            }
         },
         components: {
             darkMode: darkMode

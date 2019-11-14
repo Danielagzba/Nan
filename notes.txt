@@ -284,3 +284,16 @@ unkPlugin
 
  ERROR  [Vue warn]: Invalid prop: custom validator check failed for prop "justify".
 
+
+
+ <v-toolbar-title class="font-weight-medium">Nan Photography</v-toolbar-title>
+
+        <v-spacer></v-spacer>
+
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
+
+        <v-btn icon>
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>

@@ -3,7 +3,7 @@
     hide-delimiters
       cycle
       show-arrows-on-hover
-    height="650px">
+    height="550px">
       <v-carousel-item
         v-for="(item,i) in photos"
         :key="i"
@@ -28,26 +28,7 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
 export default {
     data() {
         return{
-            drawer: false,
-            items: [
-                {
-                    icon: 'mdi-home',
-                    text: 'Home',
-                },
-                {
-                    icon: 'mdi-camera',
-                    text: 'Work',
-                },
-                {
-                    icon: 'mdi-face',
-                    text: 'About me',
-                },
-                {
-                    icon: 'mdi-email',
-                    text: 'Contact',
-                },
-            ],
-            model: 1,
+
 
             photos: [
                 {
