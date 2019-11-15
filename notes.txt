@@ -297,3 +297,6 @@ unkPlugin
         <v-btn icon>
           <v-icon>mdi-dots-vertical</v-icon>
         </v-btn>
+
+
+        https://accounts.spotify.com/authorize?client_id=13528ecc68b947d68d3337ec04664846&response_type=code&redirect_uri=http://localhost:3000/&scope=user-read-private%20user-read-email&state=34fFs29kd09

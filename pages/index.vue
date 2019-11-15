@@ -3,7 +3,7 @@
     hide-delimiters
       cycle
       show-arrows-on-hover
-    height="550px">
+    height="100%">
       <v-carousel-item
         v-for="(item,i) in photos"
         :key="i"
@@ -19,7 +19,13 @@
   div {
     font-family: "montserrat", Times, serif;
   }
+  .carousel-inner > item {
+    height: 400px;
+  }
 </style>
+carousel-inner > .item > img, .carousel-inner > .item > a > img {
+width: 100%;
+}
 
 <script>
 import Logo from '~/components/Logo.vue'
@@ -36,6 +42,9 @@ export default {
                 },
                 {
                     src: 'https://i.imgur.com/JV55Ta2.jpg',
+                },
+                {
+                  src: 'https://i.imgur.com/AGnj5K1.jpg'
                 },
                 {
                     src: 'https://i.imgur.com/Wyw8j10.jpg',

@@ -11,7 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "spotify-web-api-node": "^4.0.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0"

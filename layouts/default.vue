@@ -3,8 +3,7 @@
 
     <v-card tile>
       <v-toolbar
-        color="primary"
-        dark
+        color="accent"
         flat>
 
 
@@ -23,11 +22,11 @@
 
         <template v-slot:extension>
         <v-tabs
-          class="tabs"
+          class="tabs white--text"
           centered
           grow
           background-color="transparent"
-          v-model="activeTab"
+
         >
           <v-tab v-for="tab in tabs" :key="tab.id" :to="tab.to" exact>
             {{ tab.name }}
@@ -76,9 +75,9 @@
 
         data(){
         return {
-            activeTab: `/user/${this.id}`,
+
             tabs: [
-                { id: 1, name: "Home", to:'/' },
+                { id: 1, name: "Home", to:'/'},
                 { id: 2, name: "Work", to:'/work' },
                 { id: 3, name: "About me", to:'/aboutme' },
                 { id: 4, name: "Contact", to:'/contact' }
