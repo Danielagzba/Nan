@@ -1,14 +1,18 @@
 <template>
   <v-app :dark="setTheme">
 
+
+
     <v-card tile>
       <v-toolbar
         color="accent"
-        flat>
+        flat
+
+      >
 
 
-
-        <v-toolbar-title>Nan</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-title class="font-weight-bold display-3" >Nan</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
@@ -28,11 +32,14 @@
           background-color="transparent"
 
         >
-          <v-tab v-for="tab in tabs" :key="tab.id" :to="tab.to" exact>
+
+
+          <v-tab v-for="tab in tabs" :key="tab.id" :to="tab.to" exact >
             {{ tab.name }}
           </v-tab>
         </v-tabs>
         </template>
+
 
 
 
@@ -46,7 +53,7 @@
 
 
     <v-footer
-      color="primary"
+      color="accent"
       app
       padless
     >
@@ -56,7 +63,7 @@
       >
 
         <v-col
-          class="lighten-1 py-4 text-center white--text"
+          class="lighten-1 py-4 text-center primary--text"
           cols="12"
         >
           <strong>By Nan</strong>

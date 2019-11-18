@@ -299,4 +299,7 @@ unkPlugin
         </v-btn>
 
 
-        https://accounts.spotify.com/authorize?client_id=13528ecc68b947d68d3337ec04664846&response_type=code&redirect_uri=http://localhost:3000/&scope=user-read-private%20user-read-email&state=34fFs29kd09
+        https://accounts.spotify.com/authorize?client_id=13528ecc68b947d68d3337ec04664846&response_type=code&redirect_uri=http://localhost:3000/&scope=playlist-read-private%20user-read-email&state=34fFs29kd09
+
+curl -H "Authorization: Basic MTM1MjhlY2M2OGI5NDdkNjhkMzMzN2VjMDQ2NjQ4NDY6ZWRhNmFjMzEzZjhmNGM2ZDk3YTFhNjIyYzhjMzY0NzU=" -d grant_type=AQDLrRuRkcjxqfgKleBYTTTHu-ApUEtlevnkowTUFNZw1q_9i5rRaGlA4kk2f252cN6HsmLq38KgUlS6edaspzf1YZYSQPlzOw64VoKyimCqY5xvjNBaxMt3gvdpXrt05QC5ao5ccZsPtnQ1qLwdS-3OHm-8_1XiWLruZPEvjltMsO9ehtzwnjAUxaqN2eqVcL8gvj_rdIm1x7p9gkQN6CWYYT5cRwXitWrZSuXC8_SYTBqB&state=34fFs29kd09 -d code=AQDLrRuRkcjxqfgKleBYTTTHu-ApUEtlevnkowTUFNZw1q_9i5rRaGlA4kk2f252cN6HsmLq38KgUlS6edaspzf1YZYSQPlzOw64VoKyimCqY5xvjNBaxMt3gvdpXrt05QC5ao5ccZsPtnQ1qLwdS-3OHm-8_1XiWLruZPEvjltMsO9ehtzwnjAUxaqN2eqVcL8gvj_rdIm1x7p9gkQN6CWYYT5cRwXitWrZSuXC8_SYTBqB&state=34fFs29kd09 -d redirect_uri=http://localhost:3000/%2Fauth https://accounts.spotify.com/api/token
+
