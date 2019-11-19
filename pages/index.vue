@@ -1,10 +1,12 @@
 <template>
+  <v-card>
   <v-carousel
     hide-delimiters
       cycle
       show-arrows-on-hover
-    height="550px">
+    height="100%">
       <v-carousel-item
+
         v-for="(item,i) in photos"
         :key="i"
         :src="item.src"
@@ -13,15 +15,16 @@
       >
       </v-carousel-item>
     </v-carousel>
+  </v-card>
 </template>
 
 <style>
   div {
-    font-family: "montserrat", Times, serif;
+    font-family: "roboto", Times, serif;
   }
   .carousel-inner img {
-    width: 100%;
-    height: 100%;
+    width: 70px;
+    height: 70px;
   }
 
 </style>

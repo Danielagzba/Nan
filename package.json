@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "spotify-web-api-node": "^4.0.0"
+    "spotify-web-api-node": "^4.0.0",
+    "vue-cover-gallery": "^1.0.7"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0"

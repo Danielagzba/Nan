@@ -12,7 +12,7 @@
 
 
         <v-spacer></v-spacer>
-        <v-toolbar-title class="font-weight-bold display-3" >Nan</v-toolbar-title>
+        <v-toolbar-title class="font-weight-bold display-3">Nan</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
@@ -42,14 +42,14 @@
 
 
 
-
       </v-toolbar>
+
     </v-card>
 
 
-    <nuxt/>
 
-    <darkMode></darkMode>
+
+    <nuxt/>
 
 
     <v-footer
@@ -73,6 +73,8 @@
     </v-footer>
   </v-app>
 </template>
+
+
 
 <script>
     import darkMode from "../components/darkMode";

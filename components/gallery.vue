@@ -1,7 +1,5 @@
 <template>
-  <v-container>
-  <Gallery :images="images"></Gallery>
-  </v-container>
+  <Gallery :images="images" ></Gallery>
 </template>
 
 <script>
@@ -24,27 +22,11 @@
                         description: "des 2",
                         href: "https://i.imgur.com/sr0L8F0.jpg"
                     },
-                    {
-                        title: "title 3",
-                        description: "des 3",
-                        href: "https://i.imgur.com/l1mAEXP.jpg"
-                    },
-                    {
-                        title: "title 4",
-                        description: "des 4",
-                        href: "https://i.imgur.com/fIeiNDK.jpg"
-                    },
-                    {
-                        title: "title 5",
-                        description: "des 5",
-                        href: "https://i.imgur.com/i5BeHnW.jpg"
-                    },
                 ],
             };
         },
     };
 </script>
-
 
 <style scoped>
 
