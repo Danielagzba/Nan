@@ -1,11 +1,23 @@
 <template>
-  <v-container>
-  <Gallery :images="images"></Gallery>
-  </v-container>
+
+
+  <div>
+    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <div
+      class="image"
+      v-for="(image, imageIndex) in images"
+      :key="imageIndex"
+      @click="index = imageIndex"
+      :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
+    ></div>
+  </div>
+
+
 </template>
 
 <script>
     import Gallery from "vue-cover-gallery"
+
     export default {
 
         name: "Example",
@@ -18,7 +30,8 @@
                     {
                         title: "title 1",
                         description: "des 1",
-                        href: "https://i.imgur.com/uEJep4N.jpg"},
+                        href: "https://i.imgur.com/u6D1wkL.jpg"
+                    },
                     {
                         title: "title 2",
                         description: "des 2",
@@ -27,17 +40,17 @@
                     {
                         title: "title 3",
                         description: "des 3",
-                        href: "https://i.imgur.com/l1mAEXP.jpg"
+                        href: "https://i.imgur.com/U2hIz27.jpg"
                     },
                     {
                         title: "title 4",
                         description: "des 4",
-                        href: "https://i.imgur.com/fIeiNDK.jpg"
+                        href: "https://i.imgur.com/H9Pyuc5.jpg"
                     },
                     {
                         title: "title 5",
                         description: "des 5",
-                        href: "https://i.imgur.com/i5BeHnW.jpg"
+                        href: "https://i.imgur.com/FweGLgk.jpg"
                     },
                 ],
             };
