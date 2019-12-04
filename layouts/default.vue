@@ -1,76 +1,105 @@
 <template>
+
   <v-app :dark="setTheme">
 
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      clipped
+      temporary
+
+    >
+      <v-list dense>
+        <template v-for="item in items">
+
+          <v-list-group
+            v-if="item.children"
+            :key="item.text"
+            v-model="item.model"
+            :prepend-icon="item.model ? item.icon : item['icon-alt']"
+
+          >
+            <template v-slot:activator>
+              <v-list-item>
+                <v-list-item-content>
+                  <v-list-item-title>
+                    {{ item.text }}
+                  </v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </template>
+            <v-list-item
+              v-for="(child, i) in item.children"
+              :key="i"
+              link
+              :to="child.to"
+            >
+              <v-list-item-action v-if="child.icon">
+                <v-icon>{{ child.icon }}</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>
+                  {{ child.text }}
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
 
 
-    <v-card tile>
-      <v-toolbar
-        color="accent"
-        flat
-
-      >
-
-
-        <v-spacer></v-spacer>
-        <v-toolbar-title class="font-weight-bold display-3">Nan</v-toolbar-title>
-
-        <v-spacer></v-spacer>
-
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-
-        <v-btn icon>
-          <v-icon>mdi-dots-vertical</v-icon>
-        </v-btn>
-
-        <template v-slot:extension>
-        <v-tabs
-          class="tabs white--text"
-          centered
-          grow
-          background-color="transparent"
-
-        >
-
-
-          <v-tab v-for="tab in tabs" :key="tab.id" :to="tab.to" exact >
-            {{ tab.name }}
-          </v-tab>
-        </v-tabs>
+          <v-list-item
+            v-else
+            :key="item.text"
+            link
+            :to="item.to"
+          >
+            <v-list-item-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ item.text }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </template>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar
+      app
+      color="accent"
+
+    >
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
+      <v-toolbar-title class="font-weight-bold display-2 text-center">Nan</v-toolbar-title>
+    </v-app-bar>
 
 
 
-      </v-toolbar>
-
-    </v-card>
 
 
 
 
+
+
+
+
+<v-content>
     <nuxt/>
+</v-content>
 
 
     <v-footer
       color="accent"
-      app
-      padless
-    >
-      <v-row
-        justify="center"
-        no-gutters
-      >
-
-        <v-col
-          class="lighten-1 py-4 text-center primary--text"
-          cols="12"
-        >
-          <strong>By Nan</strong>
-        </v-col>
-      </v-row>
+      app>
       <darkMode></darkMode>
+      <span class="primary--text">By Nan</span>
+
+
     </v-footer>
+
+      <darkMode></darkMode>
+
   </v-app>
 </template>
 
@@ -85,12 +114,35 @@
         data(){
         return {
 
-            tabs: [
-                { id: 1, name: "Home", to:'/'},
-                { id: 2, name: "Work", to:'/work' },
-                { id: 3, name: "About me", to:'/aboutme' },
-                { id: 4, name: "Contact", to:'/contact' }
-            ]
+            dialog: false,
+
+            items: [
+                {
+                    icon: 'mdi-home-outline', text: ' Home', to: '/'
+                },
+
+                {
+                    text: 'Work',
+                    icon: 'mdi-camera-outline',
+                    'icon-alt': 'mdi-camera-outline',
+                    model: false,
+                    children: [
+                        { text: 'Portraits', to: '/work'},
+                        { text: 'Studio' },
+                        { text: 'Landscape' },
+                        { text: 'Product' },
+                    ],
+                },
+                {
+                    icon: 'mdi-account-outline', text: 'About me', to: '/aboutme'
+                },
+                {
+                    icon: 'mdi-email-outline', text: 'Contact', to: '/contact'
+                },
+
+            ],
+drawer: null,
+
         };
 
 

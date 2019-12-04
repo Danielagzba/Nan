@@ -1,6 +1,6 @@
 <template>
-
-
+<v-col>
+  <quick-menu :menu-count=count :icon-class=icons :menu-url-list=list></quick-menu>
   <div>
     <gallery :images="images" :index="index" @close="index = null"></gallery>
     <div
@@ -8,57 +8,55 @@
       v-for="(image, imageIndex) in images"
       :key="imageIndex"
       @click="index = imageIndex"
-      :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
+      :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '300px' }"
     ></div>
   </div>
 
 
+</v-col>
+
 </template>
 
 <script>
-    import Gallery from "vue-cover-gallery"
+
+    import VueGallery from 'vue-gallery';
 
     export default {
-
-        name: "Example",
-        components: {
-            Gallery
-        },
-        data() {
+        data: function () {
             return {
                 images: [
-                    {
-                        title: "title 1",
-                        description: "des 1",
-                        href: "https://i.imgur.com/u6D1wkL.jpg"
-                    },
-                    {
-                        title: "title 2",
-                        description: "des 2",
-                        href: "https://i.imgur.com/sr0L8F0.jpg"
-                    },
-                    {
-                        title: "title 3",
-                        description: "des 3",
-                        href: "https://i.imgur.com/U2hIz27.jpg"
-                    },
-                    {
-                        title: "title 4",
-                        description: "des 4",
-                        href: "https://i.imgur.com/H9Pyuc5.jpg"
-                    },
-                    {
-                        title: "title 5",
-                        description: "des 5",
-                        href: "https://i.imgur.com/FweGLgk.jpg"
-                    },
+                    'https://i.imgur.com/u6D1wkL.jpg',
+                    'https://i.imgur.com/sr0L8F0.jpg',
+                    'https://i.imgur.com/U2hIz27.jpg',
+                    'https://i.imgur.com/H9Pyuc5.jpg',
+                    'https://i.imgur.com/tCrivAG.jpg',
+                    'https://i.imgur.com/NwanJSu.jpg',
+                    'https://i.imgur.com/9W7O5jJ.jpg',
+                    'https://i.imgur.com/kmCH1Sq.jpg',
+                    'https://i.imgur.com/LsiyOKC.jpg',
+                    'https://i.imgur.com/LTHjzmG.jpg',
+                    'https://i.imgur.com/UEL3oGd.jpg',
+                    'https://i.imgur.com/hi4GD18.jpg',
                 ],
+                index: null
             };
         },
-    };
+
+        components: {
+            'gallery': VueGallery
+        },
+    }
 </script>
 
 
 <style scoped>
-
+  .image {
+    float: left;
+    align-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 3px solid #ebebeb;
+    margin: 5px;
+  }
 </style>

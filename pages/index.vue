@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+<div class="page-header clear-filter">
   <v-carousel
     hide-delimiters
       cycle
@@ -15,7 +15,8 @@
       >
       </v-carousel-item>
     </v-carousel>
-  </v-card>
+</div>
+
 </template>
 
 <style>
@@ -40,9 +41,7 @@ export default {
 
 
             photos: [
-                {
-                    src: 'https://i.imgur.com/dVQD7jm.jpg',
-                },
+
                 {
                     src: 'https://i.imgur.com/JV55Ta2.jpg',
                 },
