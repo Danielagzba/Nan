@@ -295,6 +295,7 @@ unkPlugin
         </v-btn>
 
         <v-btn icon>
+
           <v-icon>mdi-dots-vertical</v-icon>
         </v-btn>
 
@@ -303,3 +304,6 @@ unkPlugin
 
 curl -H "Authorization: Basic MTM1MjhlY2M2OGI5NDdkNjhkMzMzN2VjMDQ2NjQ4NDY6ZWRhNmFjMzEzZjhmNGM2ZDk3YTFhNjIyYzhjMzY0NzU=" -d grant_type=AQDLrRuRkcjxqfgKleBYTTTHu-ApUEtlevnkowTUFNZw1q_9i5rRaGlA4kk2f252cN6HsmLq38KgUlS6edaspzf1YZYSQPlzOw64VoKyimCqY5xvjNBaxMt3gvdpXrt05QC5ao5ccZsPtnQ1qLwdS-3OHm-8_1XiWLruZPEvjltMsO9ehtzwnjAUxaqN2eqVcL8gvj_rdIm1x7p9gkQN6CWYYT5cRwXitWrZSuXC8_SYTBqB&state=34fFs29kd09 -d code=AQDLrRuRkcjxqfgKleBYTTTHu-ApUEtlevnkowTUFNZw1q_9i5rRaGlA4kk2f252cN6HsmLq38KgUlS6edaspzf1YZYSQPlzOw64VoKyimCqY5xvjNBaxMt3gvdpXrt05QC5ao5ccZsPtnQ1qLwdS-3OHm-8_1XiWLruZPEvjltMsO9ehtzwnjAUxaqN2eqVcL8gvj_rdIm1x7p9gkQN6CWYYT5cRwXitWrZSuXC8_SYTBqB&state=34fFs29kd09 -d redirect_uri=http://localhost:3000/%2Fauth https://accounts.spotify.com/api/token
 
+ div {
+  background: linear-gradient( to left top, rgba(176, 190, 197, 0.5), rgba(176, 190, 197, 0.5));
+  }
