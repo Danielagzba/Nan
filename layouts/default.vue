@@ -2,13 +2,25 @@
 
   <v-app :dark="setTheme">
 
+    <v-app-bar
+      app
+      color="accent"
+      flat
+
+    >
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
+
+    </v-app-bar>
+
     <v-navigation-drawer
       v-model="drawer"
       app
       clipped
-      temporary
+      temporary>
 
-    >
+
+
+
       <v-list dense>
         <template v-for="item in items">
 
@@ -63,6 +75,7 @@
           </v-list-item>
         </template>
       </v-list>
+      <darkMode></darkMode>
     </v-navigation-drawer>
 
 
@@ -73,7 +86,27 @@
     <nuxt/>
 </v-content>
 
+    <v-footer
+      color="accent"
+      >
 
+      <v-row
+        justify="center"
+        no-gutters
+      >
+
+        <v-col
+          class="lighten-1 py-4 text-center primary--text font-weight-thin"
+          cols="12"
+        >
+           <strong>BY NAN</strong>
+        </v-col>
+      </v-row>
+
+
+
+
+    </v-footer>
 
 
   </v-app>

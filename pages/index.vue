@@ -1,11 +1,11 @@
 <template>
-  <div class="text-center">
-
+<v-row>
     <v-carousel
-      height="703px"
+
       hide-delimiters
       cycle
       show-arrows-on-hover>
+
       <v-carousel-item
         v-for="(item,i) in photos"
         :key="i"
@@ -14,19 +14,26 @@
         transition="fade-transition"
       >
 
-          <p class="font-weight-light text-uppercase font-weight-black display-2 white--text"> Daniela Barron </p>
+        <v-row align="center" justify="center">
+          <v-col sm="6" md="12">
+
+            <h1 class="font-weight-thin text-uppercase text-center display-4 white--text carousel-inner"> Daniela Barron </h1>
+
+          </v-col>
+        </v-row>
 
 
       </v-carousel-item>
     </v-carousel>
-  </div>
 
+
+</v-row>
 </template>
 
 <style>
-  div {
-
-  }
+.carousel-inner{
+  padding: 14% 0;
+}
 </style>
 
 
@@ -44,12 +51,8 @@
                     {
                         src: 'https://i.imgur.com/JV55Ta2.jpg',
                     },
-
                     {
                         src: 'https://i.imgur.com/Zyd88GD.jpg',
-                    },
-                    {
-                        src: 'https://i.imgur.com/r0tX99x.jpg',
                     },
                     {
                         src: 'https://i.imgur.com/fmWQNVO.jpg',
