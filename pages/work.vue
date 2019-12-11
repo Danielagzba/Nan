@@ -2,14 +2,17 @@
 <v-col>
   <quick-menu :menu-count=count :icon-class=icons :menu-url-list=list></quick-menu>
   <div>
-    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <gallery :images="images" :index="index" @close="index = null"
+    ></gallery>
     <div
-      class="image"
+      class="image mousechange"
       v-for="(image, imageIndex) in images"
       :key="imageIndex"
       @click="index = imageIndex"
       :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '300px' }"
-    ></div>
+    >
+
+    </div>
   </div>
 
 
@@ -58,5 +61,8 @@
     background-position: center center;
     border: 3px solid #ebebeb;
     margin: 5px;
+  }
+  .mousechange:hover {
+    cursor: pointer;
   }
 </style>
