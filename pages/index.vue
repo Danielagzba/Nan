@@ -1,7 +1,7 @@
 <template>
-<v-row>
+  <v-row>
     <v-carousel
-
+      class="carousel-image"
       hide-delimiters
       cycle
       show-arrows-on-hover>
@@ -15,9 +15,13 @@
       >
 
         <v-row align="center" justify="center">
-          <v-col sm="6" md="12">
+          <v-col sm="12" md="12" xs="12">
 
-            <h1 class="font-weight-thin text-uppercase text-center display-4 white--text carousel-inner"> Daniela Barron </h1>
+            <h1 class="font-weight-thin text-uppercase text-center display-4 white--text carousel-inner"> Daniela Barron
+              <p class="display-1 font-weight-regular">
+                Travel photographer
+              </p></h1>
+
 
           </v-col>
         </v-row>
@@ -27,13 +31,17 @@
     </v-carousel>
 
 
-</v-row>
+  </v-row>
 </template>
 
 <style>
-.carousel-inner{
-  padding: 14% 0;
-}
+  .carousel-inner {
+    padding: 15% 0;
+  }
+
+  .carousel-image {
+    max-height: 100% !important;
+  }
 </style>
 
 
@@ -49,13 +57,13 @@
                 photos: [
 
                     {
-                        src: 'https://i.imgur.com/JV55Ta2.jpg',
-                    },
-                    {
                         src: 'https://i.imgur.com/Zyd88GD.jpg',
                     },
                     {
                         src: 'https://i.imgur.com/fmWQNVO.jpg',
+                    },
+                    {
+                        src: 'https://i.imgur.com/9VY9hPi.jpg',
                     },
                 ],
             }

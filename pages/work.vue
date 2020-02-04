@@ -3,7 +3,9 @@
   <quick-menu :menu-count=count :icon-class=icons :menu-url-list=list></quick-menu>
   <div>
     <gallery :images="images" :index="index" @close="index = null"
-    ></gallery>
+    >
+      <v-icon>mdi-home</v-icon>
+    </gallery>
     <div
       class="image mousechange"
       v-for="(image, imageIndex) in images"
@@ -28,18 +30,17 @@
         data: function () {
             return {
                 images: [
-                    'https://i.imgur.com/u6D1wkL.jpg',
-                    'https://i.imgur.com/sr0L8F0.jpg',
-                    'https://i.imgur.com/U2hIz27.jpg',
-                    'https://i.imgur.com/H9Pyuc5.jpg',
-                    'https://i.imgur.com/tCrivAG.jpg',
-                    'https://i.imgur.com/NwanJSu.jpg',
-                    'https://i.imgur.com/9W7O5jJ.jpg',
-                    'https://i.imgur.com/kmCH1Sq.jpg',
-                    'https://i.imgur.com/LsiyOKC.jpg',
-                    'https://i.imgur.com/LTHjzmG.jpg',
-                    'https://i.imgur.com/UEL3oGd.jpg',
-                    'https://i.imgur.com/hi4GD18.jpg',
+                    'https://i.imgur.com/cR6kx50.jpg',
+                    'https://i.imgur.com/BaCH16T.jpg',
+                    'https://i.imgur.com/H67xEcc.jpg',
+                    'https://i.imgur.com/pZnMB2N.jpg',
+                    'https://i.imgur.com/kmadKgS.jpg',
+                    'https://i.imgur.com/AeJ8hyx.jpg',
+                    'https://i.imgur.com/Az0vAcQ.jpg',
+                    'https://i.imgur.com/88zVwBK.jpg',
+                    'https://i.imgur.com/gm8nXtu.jpg',
+                    'https://i.imgur.com/NV9D3pf.jpg',
+
                 ],
                 index: null
             };

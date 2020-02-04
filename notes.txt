@@ -307,3 +307,8 @@ curl -H "Authorization: Basic MTM1MjhlY2M2OGI5NDdkNjhkMzMzN2VjMDQ2NjQ4NDY6ZWRhNm
  div {
   background: linear-gradient( to left top, rgba(176, 190, 197, 0.5), rgba(176, 190, 197, 0.5));
   }
+
+
+
+git checkout -b (name)(creates a new branch)
+git checkout (name)(switches to another branch)
