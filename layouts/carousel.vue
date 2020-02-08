@@ -1,5 +1,4 @@
 <template>
-
   <v-app :dark="setTheme" style="height: 100vh">
 
     <v-app-bar
@@ -81,14 +80,14 @@
 
 
 
-<v-content>
-  <nuxt></nuxt>
-</v-content>
+
+    <nuxt></nuxt>
+
 
     <v-footer
       app
       color="accent"
-      >
+    >
 
       <v-row
         justify="center"
@@ -99,7 +98,7 @@
           class="lighten-1 py-4 text-center primary--text font-weight-thin"
           cols="12"
         >
-           <strong>BY NAN</strong>
+          <strong>BY NAN</strong>
         </v-col>
       </v-row>
 
@@ -112,47 +111,46 @@
   </v-app>
 </template>
 
-
-
 <script>
+
     import darkMode from "../components/darkMode";
 
     export default {
-
+        name: "carousel",
 
         data(){
-        return {
+            return {
 
-            dialog: false,
+                dialog: false,
 
-            items: [
-                {
-                    icon: 'mdi-home-outline', text: ' Home', to: '/'
-                },
+                items: [
+                    {
+                        icon: 'mdi-home-outline', text: ' Home', to: '/'
+                    },
 
-                {
-                    text: 'Work',
-                    icon: 'mdi-camera-outline',
-                    'icon-alt': 'mdi-camera-outline',
-                    model: false,
-                    children: [
-                        { text: 'Portraits', to: '/work'},
-                        { text: 'Studio' },
-                        { text: 'Landscape' },
-                        { text: 'Product' },
-                    ],
-                },
-                {
-                    icon: 'mdi-account-outline', text: 'About me', to: '/aboutme'
-                },
-                {
-                    icon: 'mdi-email-outline', text: 'Contact', to: '/contact'
-                },
+                    {
+                        text: 'Work',
+                        icon: 'mdi-camera-outline',
+                        'icon-alt': 'mdi-camera-outline',
+                        model: false,
+                        children: [
+                            { text: 'Portraits', to: '/work'},
+                            { text: 'Studio' },
+                            { text: 'Landscape' },
+                            { text: 'Product' },
+                        ],
+                    },
+                    {
+                        icon: 'mdi-account-outline', text: 'About me', to: '/aboutme'
+                    },
+                    {
+                        icon: 'mdi-email-outline', text: 'Contact', to: '/contact'
+                    },
 
-            ],
-drawer: null,
+                ],
+                drawer: null,
 
-        };
+            };
 
 
         },
@@ -170,5 +168,11 @@ drawer: null,
             }
         }
 
+
     }
+
 </script>
+
+<style scoped>
+
+</style>

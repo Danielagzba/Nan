@@ -1,49 +1,44 @@
 <template>
-
-      <div>
-        <gallery :images="images" :index="index" @close="index = null"></gallery>
-        <div
-          class="image"
-          v-for="(image, imageIndex) in images"
-          :key="imageIndex"
-          @click="index = imageIndex"
-          :style="{ backgroundImage: 'url(' + image + ')', width: '400px', height: '400px' }"
-        ></div>
-      </div>
+<v-content>
+  <v-container fluid>
+    <v-row>
+      <v-col>
 
 
+          <v-img
+            v-if="showPicture"
+            @click="myMethod"
+            src="https://i.imgur.com/BaCH16T.jpg"
+            aspect-ratio="1"
+            max-width="300"
+            max-height="300"
+          >
+          </v-img>
+
+
+      </v-col>
+    </v-row>
+  </v-container>
+
+</v-content>
 </template>
 
 <script>
-    import VueGallery from 'vue-gallery';
-
     export default {
-        data: function () {
+        data() {
             return {
-                images: [
-                    'https://i.imgur.com/u6D1wkL.jpg',
-                    'https://i.imgur.com/sr0L8F0.jpg',
-                    'https://i.imgur.com/U2hIz27.jpg',
-                    'https://i.imgur.com/H9Pyuc5.jpg',
-                ],
-                index: null
-            };
+                showPicture: true
+            }
         },
-
-        components: {
-            'gallery': VueGallery
-        },
+        methods: {
+            myMethod() {
+                this.showPicture = false
+            }
+        }
     }
 </script>
 
 <style scoped>
-  .image {
-    float: left;
-    align-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: 3px solid #ebebeb;
-    margin: 5px;
-  }
+
+
 </style>
